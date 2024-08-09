@@ -1,0 +1,75 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_session/local_session
+
+    This template renders the session management page.
+
+    Example context (json):
+    {
+        "trainingadmincourselink" : "link to the training management page",
+        "moveentities" : [
+            {
+                "id" : 1,
+                "issubentity" : false,
+                "name" : "Entity"
+            },
+            {
+                "id" : 3,
+                "issubentity" : true,
+                "name" : "Sub entity"
+            },
+        ]
+    }
+
+}}
+<div id="create-session">
+    <a href="{{ trainingadmincourselink }}" class="btn btn-primary">
+        {{# str }} createsession, local_session {{/ str }}
+    </a>
+</div>
+
+<table id="session-table">
+    <thead>
+    <tr>
+        <th class="header-trainingname">
+            {{# str }} trainingname, local_session {{/ str }}
+        </th>
+        <th class="header-shortname">
+            {{# str }} shortname, local_session {{/ str }}
+        </th>
+        <th class="header-status">
+            {{# str }} status, local_session {{/ str }}
+        </th>
+        <th class="header-startdate">
+            {{# str }} startdate, local_session {{/ str }}
+        </th>
+        <th class="header-participants">
+            {{# str }} participants, local_session {{/ str }}
+        </th>
+        <th class="header-shared">
+            {{# str }} shared, local_session {{/ str }}
+        </th>
+        <th class="header-actions">
+            {{# str }} actions, local_session {{/ str }}
+        </th>
+    </tr>
+    </thead>
+</table>
+
+{{> local_session/move_session_popup }}
+{{> local_session/delete_session_popup }}

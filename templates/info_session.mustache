@@ -1,0 +1,126 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_session/info_session
+
+    This template renders the session workflow.
+}}
+
+<div id="workflow-session">
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+        {{# pix }} workflowsession, local_session, Les différents statuts d'une session {{/ pix }}
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <!-- formation Description -->
+        <div class="workflow-description">
+            <h3>Les différents statuts d'une session</h3>
+
+            <p dir="ltr" style="text-align: left;">
+            <p>Il existe&nbsp;<ins>7&nbsp;statuts possibles</ins>&nbsp;pour une session. Chaque statut à sa particularité :</p>
+            <ul>
+                <li><b>«&nbsp;<ins>En préparation</ins>
+                </b>», c'est le statut initial d'une session.
+                </li>
+                <ul>
+                    <li>La session n'est pas accessible aux participants;</li>
+                    <li>Les formateurs peuvent ainsi préparer la formation ;</li>
+                    <li>Statuts disponibles : Inscriptions ouvertes</li>
+                </ul>
+            </ul>
+            <ul>
+                <li>«&nbsp;<b>
+                    <ins>Inscriptions ouvertes</ins>
+                </b>»,
+                    <ul>
+                        <li>la formation apparaît dans l'offre aux agents selon le niveau de partage de la session défini par le responsable de formation central,</li>
+                        <li>les participants peuvent s'inscrire,</li>
+                        <li>Statuts disponibles : Reporter ou Annuler la session
+                            <ul>
+                                <li>Attention : l'annulation de session est réalisée depuis la gestion des sessions</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>«&nbsp;<b>
+                    <ins>Reportée</ins>
+                </b>»,
+                    <ul>
+                        <li>Notifie par messagerie aux participants, formateurs et responsable de formation inscrits le report de la session à une date ultérieure</li>
+                        <li>Statuts disponibles : Inscriptions ouvertes, Annuler
+                            <ul>
+                                <li>Attention : l'annulation de session est réalisée depuis la gestion des sessions</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><b>«&nbsp;<ins>En cours</ins>
+                </b>»,
+                    <ul>
+                        <li>A la date d'ouverture (si elle existe), la session passe automatiquement à "En cours".</li>
+                        <li>Pendant cette période, les participants peuvent toujours s'inscrire</li>
+                        <li>Statuts disponibles : Reportée, Annuler la session
+                            <ul>
+                                <li>Attention : l'annulation de session est réalisée depuis la gestion des sessions</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>«&nbsp;<b>
+                    <ins>Terminée</ins>
+                </b>»,
+                </li>
+                <ul>
+                    <li>à la date de fin de la session (si elle existe), la session passe automatiquement à "Terminée"</li>
+                    <li>Tant que la session n'est pas archivée, les participants peuvent faire des contributions</li>
+                    <li>Statuts disponibles : Archivée</li>
+                </ul>
+            </ul>
+            <ul>
+                <li>«&nbsp;<b>
+                    <ins>Archivée</ins>
+                </b>»,
+                </li>
+                <ul>
+                    <li>30 jours après la fin de la session ou sur une action manuelle, la session passe automatiquement au statut "Archivée",</li>
+                    <li>Les participants ont toujours accès au contenu mais ne peuvent faire de nouvelles contributions (activités collaboratives)</li>
+                    <li>Statuts disponibles : Terminée (si la date de fin + 30j n'est pas dépassée)</li>
+                </ul>
+            </ul>
+            <ul>
+                <li>«&nbsp;<b>
+                    <ins>Annulée</ins>
+                </b>»,
+                    <ul>
+                        <li>Action manuelle</li>
+                        <li>Notifie par messagerie aux participants, formateurs et responsable de formation central de l'annulation de la session de formation,</li>
+                        <li>Statuts disponibles (aucun, une annulation est définitive)</li>
+                    </ul>
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>

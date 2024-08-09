@@ -1,0 +1,196 @@
+#page-course-view-edadmin {
+
+  #session-table_wrapper.dataTables_wrapper {
+    .dt-buttons {
+      text-align: right;
+
+      button {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  #create-session {
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+
+  div.dt-button {
+    width: fit-content;
+    padding: 6px 12px 6px 12px;
+    margin: 4px;
+    background-color: #000091;
+    border: 1px solid transparent;
+
+    &:focus-within {
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:focus {
+        -webkit-box-shadow: none;
+        background: none;
+      }
+
+    }
+
+  }
+
+  #session-filters-table {
+    border: 1px black solid;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    width: fit-content;
+
+    legend {
+      width: 45px;
+      font-size: 15px;
+      padding: revert;
+      margin-left: 15px;
+    }
+
+    div {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  #session-table {
+    width: 100% !important;
+    font-size: 14px;
+
+    td, th {
+      font-size: 14px;
+    }
+
+    th.action-admin-session {
+      min-width: 90px;
+      max-width: 90px;
+    }
+
+    td.action-admin-session {
+
+      flex-wrap: wrap;
+      min-width: 100px;
+
+      div {
+
+        img {
+          width: 16px;
+          height: 16px;
+
+          &.cursor-image-session-admin-session {
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+
+    .timecreated-session {
+      width: 110px !important;
+    }
+
+    .min-size {
+      width: 55px !important;
+    }
+  }
+
+}
+
+.btn-movesession,
+.btn-deletesession {
+  cursor: pointer;
+}
+
+#page-course-view-edadmin #delete-session-popup,
+#page-course-view-edadmin #move-session-popup {
+  display: none;
+}
+
+#page-course-view-edadmin #delete-session-popup {
+  padding-top: 30px;
+}
+
+#page-enrol-editinstance {
+  #fitem_id_roleid,
+  #fitem_id_customint3,
+  #fitem_id_customint6 {
+    display: none;
+  }
+}
+
+#workflow-session {
+
+  display: none;
+
+  .workflow-description {
+    font-size: 14px;
+
+    h3 {
+      font-size: 22px;
+    }
+  }
+
+  .left-column {
+    text-align: center;
+
+    img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 50px;
+      max-width: 650px;
+    }
+  }
+}
+
+#recyclebin {
+  display: inline-block;
+  text-align: right;
+  height: 36px;
+  padding: 7px 20px 7px 42px !important;
+  background-image: url([[pix:local_trainings|trash]]) !important;
+  background-position: 20px center !important;
+  background-repeat: no-repeat !important;
+
+  a {
+    color: #000091;
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+#page-local-session-pages-update_session {
+  #warningsinfo {
+    margin-top: 20px;
+
+    .text-warning {
+      color: #fc5d00 !important;
+    }
+  }
+
+  #fitem_id_accompaniment {
+
+    span.d-inline-block,
+    label.d-inline {
+      width: 100%;
+
+      .text-warning {
+        float: right;
+        color: #fc5d00 !important;
+      }
+    }
+  }
+
+  #fitem_id_maxparticipants.hidden {
+    & + #fitem_id_placesavailable {
+      display: none;
+    }
+  }
+}
