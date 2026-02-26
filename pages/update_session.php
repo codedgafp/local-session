@@ -76,7 +76,7 @@ if (has_capability('local/session:manage', $sessionentity->get_context())) {
     $PAGE->navbar->add(get_string('sessionmanagement', 'local_session'), $trainingcourse['link']);
 }
 
-$PAGE->navbar->add($sessionentity->name, $session->get_url());
+$PAGE->navbar->add($session->shortname, $session->get_url());
 $PAGE->navbar->add(get_string('updatesession', 'local_session'), $url);
 
 // Fetch session context.
@@ -88,7 +88,6 @@ $PAGE->set_context($context);
 // Set page title.
 $PAGE->set_heading($session->fullname);
 $PAGE->set_title($session->fullname . ': ' . get_string('updatesession', 'local_session'));
-
 $logo = $sessionentity->get_logo();
 
 $logourl = '';
